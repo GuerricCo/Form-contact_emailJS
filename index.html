@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form" novalidate>
+            <input type="hidden" name="contact_number" value="697483">
+
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" name="name" required>
+                <div class="error-message">Veuillez entrer votre nom</div>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+                <div class="error-message">Veuillez entrer une adresse email valide</div>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="5" required></textarea>
+                <div class="error-message">Veuillez entrer votre message</div>
+            </div>
+
+            <input type="submit" value="Envoyer">
+            <div id="status"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
